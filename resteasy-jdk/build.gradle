@@ -1,0 +1,31 @@
+group = 'fi.linuxbox.jaxrs.se'
+version = '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'application'
+
+sourceCompatibility = 1.7
+
+mainClassName = 'fi.linuxbox.jaxrs.se.resteasy.jdk.Boot'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile project(':jaxrs')
+
+    runtime 'org.jboss.resteasy:resteasy-jackson2-provider:3.0.19.Final'
+
+    compile "org.jboss.resteasy:resteasy-jdk-http:3.0.19.Final", {
+        // exclude legacy logging framework...
+        exclude module: 'commons-logging'
+    }
+    // bridge that to SLF4J instead
+    runtime 'org.slf4j:jcl-over-slf4j:1.7.21'
+
+    compile 'org.slf4j:slf4j-api:1.7.21'
+    compile 'ch.qos.logback:logback-classic:1.1.7'
+
+    testCompile 'org.spockframework:spock-core:1.0-groovy-2.4'
+}

@@ -1,0 +1,4 @@
+rootProject.name = 'jaxrs-se-example'
+include 'jaxrs'
+include 'jersey-jdk'
+include 'resteasy-jdk'

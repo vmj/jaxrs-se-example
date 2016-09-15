@@ -1,0 +1,18 @@
+group = 'fi.linuxbox.jaxrs.se'
+version = '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.7
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compileOnly 'org.slf4j:slf4j-api:1.7.21'
+
+    compile 'javax.ws.rs:javax.ws.rs-api:2.0.1'
+
+    testCompile 'org.spockframework:spock-core:1.0-groovy-2.4'
+}
