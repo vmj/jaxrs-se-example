@@ -1,21 +1,9 @@
-package fi.linuxbox.jaxrs.se.model;
-
-import java.util.*;
+package fi.linuxbox.jaxrs.se.model
 
 /**
  *
  */
-public class Articles
+class Articles
 {
-    private List<Article> articles;
-
-    public List<Article> getArticles()
-    {
-        return articles;
-    }
-
-    public void setArticles(final List<Article> articles)
-    {
-        this.articles = articles;
-    }
+    List<Article> articles
 }

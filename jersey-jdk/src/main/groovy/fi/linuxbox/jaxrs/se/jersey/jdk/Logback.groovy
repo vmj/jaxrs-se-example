@@ -1,25 +1,25 @@
-package fi.linuxbox.jaxrs.se.jersey.jdk;
+package fi.linuxbox.jaxrs.se.jersey.jdk
 
-import ch.qos.logback.classic.*;
-import ch.qos.logback.core.status.*;
-import ch.qos.logback.core.util.*;
+import ch.qos.logback.classic.*
+import ch.qos.logback.core.status.*
+import ch.qos.logback.core.util.*
 
-import static ch.qos.logback.classic.Level.*;
+import static ch.qos.logback.classic.Level.*
 
-public class Logback
+class Logback
         extends BasicConfigurator
 {
-    public Logback()
+    Logback()
     {
-        super();
+        super()
     }
 
     @Override
-    public void configure(final LoggerContext lc) {
-        super.configure(lc);
-        lc.getLogger(getClass()).setLevel(DEBUG);
+    void configure(final LoggerContext lc) {
+        super.configure(lc)
+        lc.getLogger(getClass()).level = DEBUG
 
-        StatusPrinter.print(lc);
-        lc.getStatusManager().add(new OnConsoleStatusListener());
+        StatusPrinter.print(lc)
+        lc.statusManager.add(new OnConsoleStatusListener())
     }
 }

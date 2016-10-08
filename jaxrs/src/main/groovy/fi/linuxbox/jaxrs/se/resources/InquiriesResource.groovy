@@ -1,20 +1,19 @@
-package fi.linuxbox.jaxrs.se.resources;
+package fi.linuxbox.jaxrs.se.resources
 
-import fi.linuxbox.jaxrs.se.model.*;
-import javax.ws.rs.*;
-import javax.ws.rs.core.*;
-import org.slf4j.*;
+import fi.linuxbox.jaxrs.se.model.*
+import groovy.util.logging.*
+import javax.ws.rs.*
+import javax.ws.rs.core.*
 
-import static javax.ws.rs.core.MediaType.APPLICATION_JSON;
+import static javax.ws.rs.core.MediaType.*
 
-public class InquiriesResource
+@Slf4j
+class InquiriesResource
 {
-    private final Logger log = LoggerFactory.getLogger(InquiriesResource.class);
-
     @POST
     @Consumes(APPLICATION_JSON)
-    public Response send(final Inquiry inquiry) {
-        log.info("Inquiry received: " + inquiry.toString());
-        return Response.accepted().build();
+    Response send(final Inquiry inquiry) {
+        log.info("Inquiry received: $inquiry")
+        Response.accepted().build()
     }
 }

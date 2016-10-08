@@ -1,27 +1,12 @@
-package fi.linuxbox.jaxrs.se.model;
+package fi.linuxbox.jaxrs.se.model
+
+import groovy.transform.ToString
 
 /**
  *
  */
-public class Inquiry
+@ToString
+class Inquiry
 {
-    private String text;
-
-    public String getText()
-    {
-        return text;
-    }
-
-    public void setText(final String text)
-    {
-        this.text = text;
-    }
-
-    @Override
-    public String toString()
-    {
-        return "Inquiry{" +
-                "text='" + text + '\'' +
-                '}';
-    }
+    String text
 }

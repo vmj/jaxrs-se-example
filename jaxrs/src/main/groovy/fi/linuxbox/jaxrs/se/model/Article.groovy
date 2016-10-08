@@ -1,39 +1,13 @@
-package fi.linuxbox.jaxrs.se.model;
+package fi.linuxbox.jaxrs.se.model
+
+import groovy.transform.ToString
 
 /**
  *
  */
-public class Article
+@ToString
+class Article
 {
-    private String title;
-    private String body;
-
-    public String getTitle()
-    {
-        return title;
-    }
-
-    public void setTitle(final String title)
-    {
-        this.title = title;
-    }
-
-    public String getBody()
-    {
-        return body;
-    }
-
-    public void setBody(final String body)
-    {
-        this.body = body;
-    }
-
-    @Override
-    public String toString()
-    {
-        return "Article{" +
-                "title='" + title + '\'' +
-                ", body='" + body + '\'' +
-                '}';
-    }
+    String title
+    String body
 }

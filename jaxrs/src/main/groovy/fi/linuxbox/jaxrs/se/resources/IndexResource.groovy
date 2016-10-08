@@ -1,21 +1,21 @@
-package fi.linuxbox.jaxrs.se.resources;
+package fi.linuxbox.jaxrs.se.resources
 
-import javax.ws.rs.*;
-import javax.ws.rs.container.*;
-import javax.ws.rs.core.*;
+import javax.ws.rs.*
+import javax.ws.rs.container.*
+import javax.ws.rs.core.*
 
 @Path("/")
-public class IndexResource {
+class IndexResource {
     @Context
-    private ResourceContext ctx;
+    private ResourceContext ctx
 
     @Path("articles")
-    public ArticlesResource publications() {
-        return ctx.getResource(ArticlesResource.class);
+    ArticlesResource publications() {
+        ctx.getResource(ArticlesResource)
     }
 
     @Path("notifications")
-    public InquiriesResource notifications() {
-        return ctx.getResource(InquiriesResource.class);
+    InquiriesResource notifications() {
+        ctx.getResource(InquiriesResource)
     }
 }

@@ -1,37 +1,22 @@
-package fi.linuxbox.jaxrs.se.resources;
+package fi.linuxbox.jaxrs.se.resources
 
-import fi.linuxbox.jaxrs.se.model.*;
-import java.util.*;
-import javax.ws.rs.*;
-import org.slf4j.*;
+import fi.linuxbox.jaxrs.se.model.*
+import groovy.util.logging.*
+import javax.ws.rs.*
 
-import static javax.ws.rs.core.MediaType.*;
+import static javax.ws.rs.core.MediaType.*
 
-public class ArticlesResource
+@Slf4j
+class ArticlesResource
 {
-    private final Logger log = LoggerFactory.getLogger(ArticlesResource.class);
-
     @GET
     @Produces(APPLICATION_JSON)
-    public Articles list() {
-        log.info("Returning article list");
-        return articles(
-                article("Title 1", "Bla bla"),
-                article("Title 2", "Bla bla"),
-                article("Title 3", "Bla bla")
-        );
-    }
-
-    private static Articles articles(final Article... items) {
-        final Articles articles = new Articles();
-        articles.setArticles(Arrays.asList(items));
-        return articles;
-    }
-
-    private static Article article(final String title, final String body) {
-        final Article article = new Article();
-        article.setTitle(title);
-        article.setBody(body);
-        return article;
+    Articles list() {
+        log.info("Returning article list")
+        new Articles(articles: [
+                new Article(title: "Title 1", body: "Bla bla"),
+                new Article(title: "Title 2", body: "Bla bla"),
+                new Article(title: "Title 3", body: "Bla bla")
+        ]);
     }
 }

@@ -1,24 +1,24 @@
-package fi.linuxbox.jaxrs.se.resteasy.jdk;
+package fi.linuxbox.jaxrs.se.resteasy.jdk
 
-import ch.qos.logback.classic.*;
-import ch.qos.logback.core.status.*;
-import ch.qos.logback.core.util.*;
+import ch.qos.logback.classic.*
+import ch.qos.logback.core.status.*
+import ch.qos.logback.core.util.*
 
-import static ch.qos.logback.classic.Level.DEBUG;
+import static ch.qos.logback.classic.Level.DEBUG
 
-public class Logback extends BasicConfigurator
+class Logback extends BasicConfigurator
 {
     public Logback()
     {
-        super();
+        super()
     }
 
     @Override
-    public void configure(final LoggerContext lc) {
-        super.configure(lc);
-        lc.getLogger(getClass()).setLevel(DEBUG);
+    void configure(final LoggerContext lc) {
+        super.configure(lc)
+        lc.getLogger(getClass()).level = DEBUG
 
-        StatusPrinter.print(lc);
-        lc.getStatusManager().add(new OnConsoleStatusListener());
+        StatusPrinter.print(lc)
+        lc.statusManager.add(new OnConsoleStatusListener())
     }
 }
