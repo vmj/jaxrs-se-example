@@ -1,0 +1,9 @@
+apply from: "$projectDir/../gradle/common.gradle"
+
+apply plugin: 'application'
+
+dependencies {
+    compile project(':jaxrs')
+
+    compile 'ch.qos.logback:logback-classic:1.1.7'
+}
