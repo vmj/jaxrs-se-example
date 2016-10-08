@@ -2,9 +2,11 @@ package fi.linuxbox.jaxrs.se.resteasy.jdk
 
 import com.sun.net.httpserver.*
 import fi.linuxbox.jaxrs.se.resources.*
+import groovy.transform.CompileStatic
 import groovy.util.logging.*
 import org.jboss.resteasy.plugins.server.sun.http.*
 
+@CompileStatic
 @Slf4j
 class Boot
 {

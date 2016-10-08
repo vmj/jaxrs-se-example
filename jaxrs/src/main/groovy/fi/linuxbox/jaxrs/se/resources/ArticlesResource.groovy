@@ -1,11 +1,13 @@
 package fi.linuxbox.jaxrs.se.resources
 
 import fi.linuxbox.jaxrs.se.model.*
+import groovy.transform.CompileStatic
 import groovy.util.logging.*
 import javax.ws.rs.*
 
 import static javax.ws.rs.core.MediaType.*
 
+@CompileStatic
 @Slf4j
 class ArticlesResource
 {
