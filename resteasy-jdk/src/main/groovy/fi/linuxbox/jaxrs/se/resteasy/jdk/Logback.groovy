@@ -3,9 +3,11 @@ package fi.linuxbox.jaxrs.se.resteasy.jdk
 import ch.qos.logback.classic.*
 import ch.qos.logback.core.status.*
 import ch.qos.logback.core.util.*
+import groovy.transform.CompileStatic
 
 import static ch.qos.logback.classic.Level.DEBUG
 
+@CompileStatic
 class Logback extends BasicConfigurator
 {
     public Logback()
