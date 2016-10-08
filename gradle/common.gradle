@@ -10,7 +10,7 @@ repositories {
 }
 
 dependencies {
-    compile 'org.codehaus.groovy:groovy:2.4.7'
+    compile 'org.codehaus.groovy:groovy:2.4.7:indy'
 
     compile 'org.slf4j:slf4j-api:1.7.21'
 
