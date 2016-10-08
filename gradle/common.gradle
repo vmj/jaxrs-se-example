@@ -1,7 +1,7 @@
 group = 'fi.linuxbox.jaxrs.se'
 version = '1.0-SNAPSHOT'
 
-apply plugin: 'java'
+apply plugin: 'groovy'
 
 sourceCompatibility = 1.7
 
@@ -10,6 +10,8 @@ repositories {
 }
 
 dependencies {
+    compile 'org.codehaus.groovy:groovy:2.4.7'
+
     compile 'org.slf4j:slf4j-api:1.7.21'
 
     testCompile 'org.spockframework:spock-core:1.0-groovy-2.4'
