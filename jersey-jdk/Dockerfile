@@ -10,11 +10,8 @@
 # start from a small Java 7 base image
 FROM openjdk:7-jre-alpine
 
-# gradle generated start script has Bashism in it
-RUN apk add --update bash && rm -rf /var/cache/apk/*
-
 # extract the distribution
 ADD jersey-jdk-1.0-SNAPSHOT.tar /
 
 # when "docker running", run the start script
-CMD ["/bin/bash", "/jersey-jdk-1.0-SNAPSHOT/bin/jersey-jdk"]
+CMD ["/jersey-jdk-1.0-SNAPSHOT/bin/jersey-jdk"]
