@@ -2,13 +2,15 @@ apply from: '../gradle/app.gradle'
 
 mainClassName = 'fi.linuxbox.jaxrs.se.resteasy.jdk.Boot'
 
-dependencies {
-    runtime 'org.jboss.resteasy:resteasy-jackson2-provider:3.0.19.Final'
+ext.resteasy = '3.1.4.Final'
 
-    compile "org.jboss.resteasy:resteasy-jdk-http:3.0.19.Final", {
+dependencies {
+    runtime "org.jboss.resteasy:resteasy-jackson2-provider:$resteasy"
+
+    compile "org.jboss.resteasy:resteasy-jdk-http:$resteasy", {
         // exclude legacy logging framework...
         exclude module: 'commons-logging'
     }
     // bridge that to SLF4J instead
-    runtime 'org.slf4j:jcl-over-slf4j:1.7.21'
+    runtime "org.slf4j:jcl-over-slf4j:$slf4j"
 }

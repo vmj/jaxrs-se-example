@@ -5,14 +5,16 @@ apply plugin: 'groovy'
 
 sourceCompatibility = 1.8
 
+ext.slf4j = '1.7.25'
+
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    compile 'org.codehaus.groovy:groovy:2.4.7:indy'
+    compile 'org.codehaus.groovy:groovy:2.4.12:indy'
 
-    compile 'org.slf4j:slf4j-api:1.7.21'
+    compile "org.slf4j:slf4j-api:$slf4j"
 
-    testCompile 'org.spockframework:spock-core:1.0-groovy-2.4'
+    testCompile 'org.spockframework:spock-core:1.1-groovy-2.4'
 }
