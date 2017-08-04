@@ -36,33 +36,30 @@ That’s it. (See the source code for more comments.)
 
 ## How to try it out
 
-I’m using gradle build system, but you do not need to install that in order to build this.
-All you need is Java SE JDK, version 7 or newer. Both Oracle and OpenJDK should work.
+I'm using *gradle* build system, but you do not need to install that in order to build this.
+All you need is *Java SE JDK*, version 8.
 
 Clone this repository:
 
   git clone https://github.com/vmj/jaxrs-se-example.git
   cd jaxrs-se-example
 
-Then build the apps by invoking the provided build script.
-
-E.g. if you’re on Linux or Unix or OSX, use:
+And build the app:
 
   ./gradlew installDist
 
-Or, if you’re on Windows, use:
+Then run the Jersey based app:
 
-  gradlew.bat installDist
+  ./jersey-jdk/build/install/jersey-jdk/bin/jersey-jdk
 
-Don’t worry, those will not install anything outside the source directory.
-The apps are installed into build/install directories relative to the app source code.
+And the RestEasy based app:
 
-Hence, you can run the apps like this:
+  ./resteasy-jdk/build/install/resteasy-jdk/bin/resteasy-jdk
 
-  jersey-jdk/build/install/jersey-jdk/bin/jersey-jdk
-  resteasy-jdk/build/install/resteasy-jdk/bin/resteasy-jdk
+If you're on Windows, add `.bat` suffix to each script (`gradlew.bat`, `jersey-jdk.bat`, `resteasy-jdk.bat`).
 
 You can clean up, too
 
   ./gradlew clean
 
+Have fun!

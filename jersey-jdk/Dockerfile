@@ -7,8 +7,8 @@
 
 # docker run --rm --read-only -p 9000:9000 --name=jaxrs-se-example vmj0/jaxrs-se-example:jersey-jdk
 
-# start from a small Java 7 base image
-FROM openjdk:7-jre-alpine
+# start from a small Java 8 base image
+FROM openjdk:8-jre-alpine
 
 # extract the distribution
 ADD jersey-jdk-1.0-SNAPSHOT.tar /
